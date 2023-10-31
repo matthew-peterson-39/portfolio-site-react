@@ -1,0 +1,165 @@
+/* Reset some default styles */
+/* 
+#E27D60
+#85DCB
+#E8A87C
+#C38D9E
+#41B3A3 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  background-color: rgb(204, 200, 170);
+  top: 0;
+  color: rgb(25, 23, 23); /* Updated text color */
+  padding: 10px;
+  z-index: 100; /* Ensure the navbar is above other content */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  list-style-type: none;
+}
+
+/* Define the CSS for the #contrast ID */
+#contrast {
+  background-color: #e38d6b; /* Updated background color for the contrast button */
+  color: #fff; /* Text color */
+}
+
+#contrast:hover {
+  background-color: #d37d5b;
+}
+
+.nav-btn {
+  background-color: #8ca5ad; 
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+/* Add hover styles for all buttons */
+.nav-btn:hover {
+  background-color:#7b959f; /* Updated background color on hover */
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(25, 23, 23); /* Updated text color for the links */
+}
+
+body {
+  font-family: 'Roboto';
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#about {
+  background-color: rgb(204, 200, 170); /* Updated background color */
+}
+
+#contact {
+  background-color: rgb(241, 239, 239); /* Updated background color */
+}
+
+.header {
+  background-color: rgb(241, 239, 239); /* Updated background color */
+  color: rgb(25, 23, 23); /* Updated text color */
+  padding: 10px 0;
+}
+
+
+
+.section {
+  display: flex;
+  padding: 40px 0;
+  flex: 1; /* Allow sections to take available height */
+}
+
+
+
+#project-container {
+  background-color: rgb(241, 239, 239); /* Updated background color */
+  min-height: 50vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Style the contact form */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: rgb(241, 239, 239); /* Updated background color */
+  color: rgb(25, 23, 23); /* Updated text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style the footer */
+footer {
+  background-color: rgb(241, 239, 239); /* Updated background color */
+  color: rgb(25, 23, 23); /* Updated text color */
+  padding: 10px 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links a {
+  margin: 0 10px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
