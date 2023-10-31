@@ -11,7 +11,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Nunito';
 }
+
+
 
 nav {
   display: flex;
@@ -49,8 +52,6 @@ nav ul {
   text-decoration: none;
   cursor: pointer;
 }
-
-
 
 /* Add hover styles for all buttons */
 .nav-btn:hover {
@@ -95,15 +96,26 @@ body {
   padding: 10px 0;
 }
 
+#name-logo {
+  font-size: 36px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 4px; /* Adjust letter spacing for a unique look */
+  margin: 20px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+}
 
+/* Add a hover effect to make it interactive */
+#name-logo:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+  color: #ff5733; /* Change text color on hover */
+}
 
 .section {
   display: flex;
   padding: 40px 0;
   flex: 1; /* Allow sections to take available height */
 }
-
-
 
 #project-container {
   background-color: rgb(241, 239, 239); /* Updated background color */

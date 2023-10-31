@@ -1,18 +1,31 @@
+import React, { useState } from 'react'
 import './App.css'
 import TodoList from './Components/TodoList'
 import TimerApp from './Components/TimerApp'
 import initialTasks from './tasks.json'
+import ContactFormModal from './Components/ContactFormModal';
+import './Modal.css';
 
 function App() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+      setIsModalOpen(true);
+    };
+  
+    const closeModal = () => {
+      setIsModalOpen(false);
+    };
+  
   return (
     <>
     <header>
-        <nav>      
-            <h1>Matthew Peterson</h1>
+        <nav>
+            <h1 id='name-logo'>Matthew Peterson</h1>
             <ul>
                 <button className='nav-btn'><a href="#about">About</a></button>
                 <button className='nav-btn'><a href="#project-container">Projects</a></button>
-                <button className='nav-btn' id='contrast'><a href="#contact">Contact</a></button>
+                <button className='nav-btn' id='contrast' onClick={openModal}><a href="#contact">Contact</a></button>
             </ul>
         </nav>
     </header>
@@ -33,29 +46,30 @@ function App() {
         <div id='project-container'>
             <div className='project-card'>
                 <TodoList initialTasks={initialTasks}/>
-            </div>
-            
+            </div> 
         </div>
-        <section id="contact" class="section">
-            <div class="container">
+        {/* <section id="contact" class="section">
+          <div class="container">
+            <div className="form-container">
+              <form id="contact-form" className="hidden">
                 <h2>Contact Me</h2>
-                <form id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit">Send Message</button>
-                </form>
+                <div className="form-group">
+                    <label htmlFor="name">Name</label>
+                    <input type="text" id="name" name="name" required/>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="email">Email</label>
+                    <input type="email" id="email" name="email" required/>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+              </form>
             </div>
-        </section>
+          </div>
+        </section> */}
     </div>
     <footer>
         <div class="container">
@@ -66,6 +80,7 @@ function App() {
             </div>
         </div>
     </footer>
+    <ContactFormModal isOpen={isModalOpen} closeModal={closeModal}/>
 
    
     </>
