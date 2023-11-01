@@ -14,24 +14,18 @@
   font-family: 'Nunito';
 }
 
-
+#app-container{
+  background-color: rgb(204, 200, 170);
+  height: 100vh;
+  width: 100vw;
+}
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  background-color: rgb(204, 200, 170);
-  top: 0;
-  color: rgb(25, 23, 23); /* Updated text color */
   padding: 10px;
-  z-index: 100; /* Ensure the navbar is above other content */
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  list-style-type: none;
+  background-color: rgb(204, 200, 170);
 }
 
 /* Define the CSS for the #contrast ID */
@@ -49,7 +43,6 @@ nav ul {
   border: none;
   padding: 10px 20px;
   margin: 5px;
-  text-decoration: none;
   cursor: pointer;
 }
 
@@ -58,68 +51,61 @@ nav ul {
   background-color:#7b959f; /* Updated background color on hover */
 }
 
-nav a {
-  text-decoration: none;
-  font-weight: bold;
-  color: rgb(25, 23, 23); /* Updated text color for the links */
-}
-
-body {
-  font-family: 'Roboto';
-}
-
-#wrapper {
+#about {
+  background-color: #7b959f;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-}
-
-.container {
-  display: flex;
-  margin: 0 auto;
-  padding: 20px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  min-height: 14vh;
 }
 
-#about {
-  background-color: rgb(204, 200, 170); /* Updated background color */
+#todo-list-card {
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Add a subtle border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  backdrop-filter: blur(10px);
 }
 
-#contact {
-  background-color: rgb(241, 239, 239); /* Updated background color */
-}
-
-.header {
-  background-color: rgb(241, 239, 239); /* Updated background color */
-  color: rgb(25, 23, 23); /* Updated text color */
-  padding: 10px 0;
+#timer-card {
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Add a subtle border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  text-align: center;
 }
 
 #name-logo {
   font-size: 36px;
   color: #333;
   text-transform: uppercase;
-  letter-spacing: 4px; /* Adjust letter spacing for a unique look */
+  letter-spacing: 4px;
   margin: 20px;
-  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Add a hover effect to make it interactive */
 #name-logo:hover {
-  transform: scale(1.05); /* Slightly scale up on hover */
-  color: #ff5733; /* Change text color on hover */
+  transform: scale(1.05);
+  color: #ff5733;
 }
 
 .section {
   display: flex;
+  justify-content: center;
+  width: 100%;
   padding: 40px 0;
   flex: 1; /* Allow sections to take available height */
 }
 
-#project-container {
-  background-color: rgb(241, 239, 239); /* Updated background color */
+#projects {
   min-height: 50vh;
+  text-align: center;
+}
+
+.project-container {
+  min-height: 60vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

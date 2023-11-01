@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './TimerApp.css'
+
 const CountdownTimer = () => {
   // Mock data for testing
   const countDownDate = new Date("Jan 30, 2024 00:00:00").getTime();
@@ -22,23 +23,23 @@ const CountdownTimer = () => {
     return `${days}d ${hours}h ${minutes}m ${seconds}s`;
   }
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const newTimeRemaining = calculateTimeRemaining(countDownDate);
-      setTimeRemaining(newTimeRemaining);
+    useEffect(() => {
+      const timer = setInterval(() => {
+        const newTimeRemaining = calculateTimeRemaining(countDownDate);
+        setTimeRemaining(newTimeRemaining);
+        //I could test this or i could wait 90 days to see if it works.....
+        if (newTimeRemaining === "Timer has completed.") {
+          clearInterval(timer);
+        }
+      }, 1000); //every second (1000ms) 
 
-      if (newTimeRemaining === "Timer has completed.") {
+      return () => {
         clearInterval(timer);
-      }
-    }, 1000);
-
-    return () => {
-      clearInterval(timer);
-    };
-  }, [countDownDate]);
+      };
+    }, [countDownDate]);
 
   return (
-    <div id='timer'>
+    <div className='timer-project'>
         <div id='small-box'>
             <h1 id='timer-title'>Freedom Timer</h1>
             <p id="timer-text">{timeRemaining}</p>
